@@ -15,3 +15,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so
+
+
+# Disable mobile data by default
+PRODUCT_PROPERTY_OVERRIDES += \
+     ro.com.android.mobiledata=false
