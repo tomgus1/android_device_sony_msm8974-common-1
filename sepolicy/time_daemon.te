@@ -1,1 +1,6 @@
 qmux_socket(time_daemon);
+
+#============= system_app ==============
+allow system_app time_data_file:file getattr;
+allow system_app timekeep_prop:file { getattr open };
+
