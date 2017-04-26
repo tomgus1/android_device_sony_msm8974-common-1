@@ -25,8 +25,11 @@ ifeq (,$(filter $(TARGET_KERNEL_SOURCE),))
   TARGET_KERNEL_SOURCE := kernel/sony/msm8974
 endif
 
+#KERNEL_TOOLCHAIN        := $(ANDROID_BUILD_TOP)/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8/bin
+#KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
+
 # use CAF variants
-BOARD_USES_QCOM_HARDWARE := true
+#BOARD_USES_QCOM_HARDWARE := true
 
 # Platform
 TARGET_BOOTLOADER_BOARD_NAME := MSM8974
@@ -57,9 +60,6 @@ TARGET_HAS_LEGACY_CAMERA_HAL1 := true
 BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGER_SHOW_PERCENTAGE := true
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
-
-# CM Hardware
-BOARD_HARDWARE_CLASS += device/sony/msm8974-common/cmhw
 
 # Font
 EXTENDED_FONT_FOOTPRINT := true
@@ -92,14 +92,14 @@ TARGET_PROVIDES_LIBLIGHT := true
 
 # Power HAL
 TARGET_POWERHAL_VARIANT := qcom
-CM_POWERHAL_EXTENSION := qcom
+#CM_POWERHAL_EXTENSION := qcom
 TARGET_POWERHAL_SET_INTERACTIVE_EXT := device/sony/msm8974-common/power/power_ext.c
 
 # RIL
 TARGET_RIL_VARIANT := caf
 
 # SELinux
-include device/qcom/sepolicy/sepolicy.mk
+#include device/qcom/sepolicy/sepolicy.mk
 
 BOARD_SEPOLICY_DIRS += \
     device/sony/msm8974-common/sepolicy

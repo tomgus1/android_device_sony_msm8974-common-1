@@ -45,9 +45,9 @@ PRODUCT_PACKAGES += \
     libstlport
 
 # Specific apps
-PRODUCT_PACKAGES += \
-    Snap \
-    Gello
+#PRODUCT_PACKAGES += \
+#    Snap \
+#    Gello
 
 # Display
 PRODUCT_PACKAGES += \
@@ -80,11 +80,11 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/media_profiles.xml:system/etc/media_profiles.xml
 
 # Media
-PRODUCT_PACKAGES += \
-    qcmediaplayer
+#PRODUCT_PACKAGES += \
+#    qcmediaplayer
 
-PRODUCT_BOOT_JARS += \
-    qcmediaplayer
+#PRODUCT_BOOT_JARS += \
+#    qcmediaplayer
 
 # Permissions
 PRODUCT_COPY_FILES += \
